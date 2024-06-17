@@ -34,7 +34,7 @@ config = {
 
     "TRACKERS" : {
         # Which trackers do you want to upload to?
-        "default_trackers" : "BLU, BHD, AITHER, STC, STT, SN, THR, R4E, HP, ACM, PTP, LCD, LST, PTER, NBL, ANT, MTV",
+        "default_trackers" : "BLU, BHD, AITHER, STC, STT, SN, THR, R4E, HP, ACM, PTP, LCD, LST, PTER, NBL, ANT, MTV, VHD",
 
         "BLU" : {
             "useAPI" : False, # Set to True if using BLU
@@ -188,6 +188,11 @@ config = {
             "announce_url" : "https://reelflix.xyz/announce/customannounceurl",
             # "anon" : False
         },
+        "VHD" : {
+            "api_key" : "VHD api key",
+            "announce_url" : "https://vision-hd.org/announce/customannounceurl",
+            # "anon" : False
+        },        
         "MANUAL" : {
             # Uncomment and replace link with filebrowser (https://github.com/filebrowser/filebrowser) link to the Upload-Assistant directory, this will link to your filebrowser instead of uploading to uguu.se
             # "filebrowser" : "https://domain.tld/filebrowser/files/Upload-Assistant/"
@@ -292,6 +297,7 @@ config = {
                 "AITHER": "🛫",
                 "STC": "📺",
                 "ACM": "🍙",
+                "VHD": "🎉",
                 "MANUAL" : "📩",
                 "UPLOAD" : "✅",
                 "CANCEL" : "🚫"
