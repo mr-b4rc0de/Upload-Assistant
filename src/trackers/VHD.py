@@ -10,7 +10,7 @@ from src.trackers.COMMON import COMMON
 from src.console import console
 
 
-class VISION():
+class VHD():
     """
     Edit for Tracker:
         Edit BASE.torrent with announce and source
@@ -27,12 +27,12 @@ class VISION():
 
     def __init__(self, config):
         self.config = config
-        self.tracker = 'VISION'
-        self.source_flag = 'VISION'
+        self.tracker = 'VHD'
+        self.source_flag = 'ViSiON HD'
         self.upload_url = 'https://vision-hd.org/api/torrents/upload'
         self.search_url = 'https://vision-hd.org/api/torrents/filter'
-        self.signature = ''
-        self.banned_groups = ['']
+        self.signature = None
+        self.banned_groups = ["OFT", "ION10", "d3g", "SicFoI", "nikt0", "CHD", "YIFY", "RMTeam", "aXXo", "mSD", "mHD", "x0r", "RARBG", "MeGusta", "FGT", "ELiTE", "ADE", "Telly", "PiRaTeS", "LAMA", "GalaxyRG", "PSA", "Pahe", "JATT", "DUS-IcTv", "Will1869", "iVy", "TGx", "edge2020", "Tigole", "QxR", "SWTYBLZ", "TAoE", "4K4U", "NAHOM"]
         pass
     
     async def get_cat_id(self, category_name):
@@ -55,6 +55,7 @@ class VISION():
 
     async def get_res_id(self, resolution):
         resolution_id = {
+            '8640p':'10', 
             '4320p': '1', 
             '2160p': '2', 
             '1440p' : '3',
