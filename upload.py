@@ -35,6 +35,7 @@ from src.trackers.BHDTV import BHDTV
 from src.trackers.RTF import RTF
 from src.trackers.ULCX import ULCX
 from src.trackers.FNP import FNP
+from src.trackers.VISION import VISION
 import json
 from pathlib import Path
 import asyncio
