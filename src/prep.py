@@ -1905,7 +1905,7 @@ class Prep():
         if " RERIP " in (video.upper() or edition):
             repack = "RERIP"
         if " HYBRID " in (video.upper() or edition):
-            edition = "HYBRID " + edition
+            edition = "Hybrid " + edition
         edition = re.sub("(REPACK\d?)?(RERIP)?(PROPER)?", "", edition, flags=re.IGNORECASE).strip()
         bad = ['internal', 'limited', 'retail']
 
