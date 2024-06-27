@@ -979,7 +979,7 @@ class Prep():
         while valid_time != True:
             valid_time = True
             if ss_times != []:
-                sst = random.randint(round(length/5), round(length/2))
+                sst = random.randint(round(length/5), round(length*0.8))
                 for each in ss_times:
                     tolerance = length / 10 / num_screens
                     if abs(sst - each) <= tolerance:
@@ -987,7 +987,7 @@ class Prep():
                 if valid_time == True:
                     ss_times.append(sst)
             else:
-                ss_times.append(random.randint(round(length/5), round(length/2)))
+                ss_times.append(random.randint(round(length/5), round(length*0.8)))
         return ss_times
 
     def optimize_images(self, image):
