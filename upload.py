@@ -242,6 +242,11 @@ async def do_the_thing(base_dir):
         trackers = [s.strip().upper() for s in trackers]
         if meta.get('manual', False):
             trackers.insert(0, "MANUAL")
+        if meta['unfo'] == True:
+            nfo_path = path.replace('.mkv','.nfo')
+            if not os.path.exists(f"{base_dir}/tmp/{os.path.basename(path)}/torrent.nfo"):
+                shutil.copyfile(nfo_path,f"{base_dir}/tmp/{os.path.basename(path)}/torrent.nfo")               
+                
         
 
 
