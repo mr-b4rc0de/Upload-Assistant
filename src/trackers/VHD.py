@@ -96,7 +96,7 @@ class VHD():
         desc = open(f"{meta['base_dir']}/tmp/{meta['uuid']}/[{self.tracker}]DESCRIPTION.txt", 'r').read()
         open_torrent = open(f"{meta['base_dir']}/tmp/{meta['uuid']}/[{self.tracker}]{meta['clean_name']}.torrent", 'rb')
         if meta['unfo'] != False:
-            open_nfo = open(f"{meta['base_dir']}/tmp/torrent.nfo", 'rb')
+            open_nfo = open(f"{meta['base_dir']}/tmp/{meta['uuid']}/torrent.nfo", 'rb')
             files = {
                 'torrent': open_torrent,
                 'nfo': open_nfo,
