@@ -245,7 +245,10 @@ async def do_the_thing(base_dir):
 
         if meta['unfo'] == True:
             if os.path.isdir(path):
-                nfo_path = path + '/' + glob.glob1(path, "*.nfo")[0]
+                try: 
+                    nfo_path = path + '/' + glob.glob1(path, "*.nfo")[0]
+                except: 
+                    console.print("No .nfo found")
             else:
                 nfo_path = os.path.splitext(path)[0] + '.nfo'
             if os.path.exists(nfo_path):
