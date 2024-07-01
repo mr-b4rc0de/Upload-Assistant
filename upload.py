@@ -247,7 +247,10 @@ async def do_the_thing(base_dir):
             if os.path.isdir(path):
                 nfo_path = path + '/' + glob.glob1(path, "*.nfo")[0]
             else:
-                nfo_path = os.path.splitext(path)[0] + '.nfo'
+                try:
+                    nfo_path = os.path.splitext(path)[0] + '.nfo'
+                except:
+                    console.print("No .nfo found")
             if os.path.exists(nfo_path):
                 if not os.path.exists(f"{base_dir}/tmp/{os.path.basename(path)}/{meta['clean_name']}.nfo"):
                     shutil.copyfile(nfo_path,f"{base_dir}/tmp/{os.path.basename(path)}/{meta['clean_name']}.nfo")            
