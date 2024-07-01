@@ -247,7 +247,8 @@ async def do_the_thing(base_dir):
             if os.path.isdir(path):
                 try: 
                     nfo_path = path + '/' + glob.glob1(path, "*.nfo")[0]
-                except: 
+                except:
+                    nfo_path =  
                     console.print("No .nfo found")
             else:
                 nfo_path = os.path.splitext(path)[0] + '.nfo'
