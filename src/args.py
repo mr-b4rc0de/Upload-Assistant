@@ -80,7 +80,7 @@ class Args():
         parser.add_argument('-ua', '--unattended', action='store_true', required=False, help=argparse.SUPPRESS)
         parser.add_argument('-vs', '--vapoursynth', action='store_true', required=False, help="Use vapoursynth for screens (requires vs install)")
         parser.add_argument('-cleanup', '--cleanup', action='store_true', required=False, help="Clean up tmp directory")
-
+        parser.add_argument('-unfo', '--unfo', action='store_true', required=False, help="Upload .nfo")
         parser.add_argument('-fl', '--freeleech', nargs='*', required=False, help="Freeleech Percentage", default=0, dest="freeleech")
         args, before_args = parser.parse_known_args(input)
         args = vars(args)
