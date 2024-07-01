@@ -95,7 +95,14 @@ class FNP():
             bd_dump = None
         desc = open(f"{meta['base_dir']}/tmp/{meta['uuid']}/[{self.tracker}]DESCRIPTION.txt", 'r').read()
         open_torrent = open(f"{meta['base_dir']}/tmp/{meta['uuid']}/[{self.tracker}]{meta['clean_name']}.torrent", 'rb')
-        files = {'torrent': open_torrent}
+        if meta['unfo'] != False:
+            open_nfo = open(f"{meta['base_dir']}/tmp/{meta['uuid']}/{meta['clean_name']}.nfo", 'rb')
+            files = {
+                'torrent': open_torrent,
+                'nfo': open_nfo,
+            }
+        else:
+            files = {'torrent': open_torrent}
         data = {
             'name' : meta['name'],
             'description' : desc,
