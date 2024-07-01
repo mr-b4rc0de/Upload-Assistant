@@ -255,13 +255,13 @@ async def do_the_thing(base_dir):
                 if not os.path.exists(nfo_path):
                     nfo_path = ""
                     console.print("\n[yellow]No .nfo found\n")
-                    
+
             if os.path.exists(nfo_path):
                 if not os.path.exists(f"{base_dir}/tmp/{os.path.basename(path)}/{meta['clean_name']}.nfo"):
                     shutil.copyfile(nfo_path,f"{base_dir}/tmp/{os.path.basename(path)}/{meta['clean_name']}.nfo")
             else:
                 meta['unfo'] = False
-                    
+
         ####################################
         #######  Upload to Trackers  #######
         ####################################
