@@ -7,6 +7,10 @@ RUN apk add --no-cache mono --repository http://dl-cdn.alpinelinux.org/alpine/ed
 RUN  apk add --no-cache --upgrade ffmpeg mediainfo python3 git py3-pip python3-dev g++ cargo mktorrent rust
 RUN pip3 install wheel
 
+# create virtual environment
+RUN python3 -m venv /venv
+ENV PATH="/venv/bin:$PATH"
+
 WORKDIR Upload-Assistant
 
 # install reqs
