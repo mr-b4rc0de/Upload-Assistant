@@ -2259,6 +2259,8 @@ class Prep():
             year = ''
         if meta.get('no_aka', False) == True:
             alt_title = ''
+        if meta.get('no_edition', False) == True:
+            edition = ''
         if meta['debug']:
             console.log("[cyan]get_name cat/type")
             console.log(f"CATEGORY: {meta['category']}")
